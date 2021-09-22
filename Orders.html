@@ -26,13 +26,28 @@
   <!-- summernote -->
   <link rel="stylesheet" href="node_modules/admin-lte/plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="css/Orders.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+         width="60">
   </div>
 
   <!-- Navbar -->
@@ -135,20 +150,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <div class="area">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -162,132 +163,151 @@
     <!-- /.content-header -->
        <!-- Main content -->
        <section class="content">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                    <div class="row">
-                      <div class="form-group col-md-6">
-                        <label>Customer Id</label>
-                        <select class="form-control select2bs4" style="width: 100%;">
-                          <option selected="selected">Alabama</option>
-                          <option>Alaska</option>
-                          <option>California</option>
-                          <option>Delaware</option>
-                          <option>Tennessee</option>
-                          <option>Texas</option>
-                          <option>Washington</option>
-                        </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="exampleInputPassword1">Customer Name</label>
-                          <input type="text" class="form-control" disabled="disabled" id="exampleInputPassword1" placeholder="Customer Name">
-                        </div>
-                    </div>
-                    <div class="row">
-                      <div class="form-group col-md-6">
-                        <label>Item Code</label>
-                         <select class="form-control select2bs4" style="width: 100%;">
-                          <option selected="selected">Alabama</option>
-                          <option>Alaska</option>
-                          <option>California</option>
-                          <option>Delaware</option>
-                          <option>Tennessee</option>
-                          <option>Texas</option>
-                          <option>Washington</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                      <label for="exampleInputPassword1">Description</label>
-                      <input type="text" class="form-control" disabled="disabled" id="exampleInputPassword1" placeholder="Description">
-                      </div>
-                    </div>
-                  <div class="row">
-                    <div class="form-group col-md-4">
-                      <label for="exampleInputPassword1">Unit Price</label>
-                      <input type="number" class="form-control" id="exampleInputPassword2" disabled="disabled"
-                             placeholder="Unit Price">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="exampleInputPassword1">Qty On Hand</label>
-                      <input type="number" class="form-control" id="exampleInputPassword3" placeholder="Qty On Hand" disabled="disabled">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="exampleInputPassword1">Qty</label>
-                      <input type="number" class="form-control" id="exampleInputPassword3" placeholder="Enter Qty">
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-              </div>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body table-responsive p-0">
-                  <table class="table table-hover text-nowrap">
-                    <thead>
-                    <tr>
-                      <th>Code</th>
-                      <th>Description</th>
-                      <th>Qty</th>
-                      <th>Unit Price</th>
-                      <th>Total</th>
-                      <th>Delete</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                    </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                    </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                      <td>11-7-2014</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Place Order</button>
-                </div>
-              </div>
-              <!-- /.card -->
-            </div>
-          </div>
+         <div class="col-md-4">
+           <!-- general form elements -->
+           <div class="card card-primary">
+             <!-- form start -->
+             <form>
+               <div class="card-body">
+                 <div>
+                   <div class="row">
+                     <div class="form-group col-md-6">
+                       <label>Customer Id</label>
+                       <select class="form-control select2bs4" style="width: 100%;">
+                         <option selected="selected">Alabama</option>
+                         <option>Alaska</option>
+                         <option>California</option>
+                         <option>Delaware</option>
+                         <option>Tennessee</option>
+                         <option>Texas</option>
+                         <option>Washington</option>
+                       </select>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="exampleInputPassword1">Customer Name</label>
+                       <input type="text" class="form-control" disabled="disabled" id="exampleInputPassword1" placeholder="Customer Name">
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="form-group col-md-6">
+                       <label>Item Code</label>
+                       <select class="form-control select2bs4" style="width: 100%;">
+                         <option selected="selected">Alabama</option>
+                         <option>Alaska</option>
+                         <option>California</option>
+                         <option>Delaware</option>
+                         <option>Tennessee</option>
+                         <option>Texas</option>
+                         <option>Washington</option>
+                       </select>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="exampleInputPassword5">Description</label>
+                       <input class="form-control" disabled="disabled" id="exampleInputPassword5"
+                              placeholder="Description" type="text">
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="form-group col-md-4">
+                       <label for="exampleInputPassword2">Unit Price</label>
+                       <input type="number" class="form-control" id="exampleInputPassword2" disabled="disabled"
+                              placeholder="Unit Price">
+                     </div>
+                     <div class="form-group col-md-4">
+                       <label for="exampleInputPassword4">Qty On Hand</label>
+                       <input class="form-control" disabled="disabled" id="exampleInputPassword4"
+                              placeholder="Qty On Hand" type="number">
+                     </div>
+                     <div class="form-group col-md-4">
+                       <label for="exampleInputPassword3">Qty</label>
+                       <input type="number" class="form-control" id="exampleInputPassword3" placeholder="Enter Qty">
+                     </div>
+                   </div>
+                 </div>
+                 <!-- /.card-body -->
+                 <div class="card-footer form-card-footer">
+                   <button class="btn btn-warning" type="button">Clear</button>
+                   <button type="submit" class="btn btn-primary">Add</button>
+                 </div>
+               </div>
+             </form>
+           </div>
+         </div>
+         <div class="col-md-8">
+           <div class="card">
+             <div class="card-body table-responsive p-0">
+               <table class="table table-hover text-nowrap" id="tblItems">
+                 <thead>
+                 <tr>
+                   <th>Code</th>
+                   <th>Description</th>
+                   <th>Qty</th>
+                   <th>Unit Price</th>
+                   <th>Total</th>
+                   <th></th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <tr>
+                   <td>OD001</td>
+                   <td>Pen</td>
+                   <td>5</td>
+                   <td>50</td>
+                   <td>250</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>OD001</td>
+                   <td>Pen</td>
+                   <td>5</td>
+                   <td>50</td>
+                   <td>250</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>OD001</td>
+                   <td>Pen</td>
+                   <td>5</td>
+                   <td>50</td>
+                   <td>250</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>OD001</td>
+                   <td>Pen</td>
+                   <td>5</td>
+                   <td>50</td>
+                   <td>250</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>OD001</td>
+                   <td>Pen</td>
+                   <td>5</td>
+                   <td>50</td>
+                   <td>250</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!-- /.card-body -->
+             <div class="card-footer table-pagination">
+               <span>Total: 5,000</span>
+               <nav aria-label="Page navigation example">
+                 <ul class="pagination">
+                   <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                   <li class="page-item"><a class="page-link" href="#">1</a></li>
+                   <li class="page-item"><a class="page-link" href="#">2</a></li>
+                   <li class="page-item"><a class="page-link" href="#">3</a></li>
+                   <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                 </ul>
+               </nav>
+               <button class="btn btn-primary btn-place-order" type="submit">Place Order</button>
+             </div>
+             <!-- /.card -->
+           </div>
+         </div>
        </section>
         </div>
       <!-- /.content -->

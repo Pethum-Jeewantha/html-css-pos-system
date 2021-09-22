@@ -110,6 +110,7 @@ textarea {
 .form-card-footer {
   display: flex;
   justify-content: flex-end;
+  padding-right: 0;
 }
 
 .form-card-footer button {
@@ -157,7 +158,9 @@ textarea {
 #tblItems thead th:nth-child(3),
 #tblItems tbody td:nth-child(3),
 #tblItems thead th:nth-child(4),
-#tblItems tbody td:nth-child(4) {
+#tblItems tbody td:nth-child(4),
+#tblItems thead th:nth-child(5),
+#tblItems tbody td:nth-child(5) {
   text-align: center;
 }
 
@@ -173,6 +176,7 @@ textarea {
 .table-pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /*.hold-transition, .sidebar-mini, .layout-fixed{*/
