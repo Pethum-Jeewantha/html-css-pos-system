@@ -1,1 +1,0 @@
-{"version":3,"sources":["Orders.css"],"names":[],"mappings":"AAAA,kBACE,6BACF,CAEA,iBACE,gBACF","file":"Orders.3fed5e3e.css","sourceRoot":"..","sourcesContent":[".table-pagination {\n  justify-content: space-between;\n}\n\n.btn-place-order {\n  margin-left: 10px;\n}\n"]}

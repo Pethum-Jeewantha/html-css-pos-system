@@ -5,3 +5,11 @@
 .btn-place-order {
   margin-left: 10px;
 }
+
+.card-body {
+  padding-bottom: 0;
+}
+
+.form-card-footer {
+  padding-right: 0;
+}
