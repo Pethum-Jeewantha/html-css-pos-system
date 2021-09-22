@@ -3,13 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Pethum Jeewantha
+    pethumjeewantha4@gmail.com
+    https://github.com/Pethum-Jeewantha
+    https://pethumjeewantha.com
+    https://twitter.com/JeewanthaPethum
 
 # THANKS
 
-    <name>
+    The teacher who taught me.
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    HTML5, CSS3, ParcelJS, HTML5BoilerPlate, Normalize.css, NPM, GitHub

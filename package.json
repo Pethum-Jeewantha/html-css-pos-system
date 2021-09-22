@@ -6,7 +6,8 @@
   "license": "MIT",
   "author": "Pethum Jeewantha <pethumjeewantha4@gmail.com> (https://pethumjeewantha.com)",
   "scripts": {
-    "build": "parcel build index.html 404.html Items.html Customers.html Orders.html",
+    "clean": "rm -rf docs",
+    "build": "parcel build index.html 404.html Items.html Customers.html Orders.html --out-dir docs",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev"
   },
