@@ -29,10 +29,25 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+         width="60">
   </div>
 
   <!-- Navbar -->
@@ -87,7 +102,7 @@
           <img src="img/avatar.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Pethum Jeewantha</a>
+          <a class="d-block" href="#">Avatar</a>
         </div>
       </div>
 
@@ -135,20 +150,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <div class="area">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -162,18 +163,17 @@
     <!-- /.content-header -->
        <!-- Main content -->
        <section class="content">
-         <div class="row justify-content-center">
-           <div class="col-md-6">
-             <!-- general form elements -->
-             <div class="card card-primary">
-               <!-- form start -->
-               <form>
-                 <div class="card-body">
-                   <div class="form-group">
-                     <label for="exampleInputEmail1">Item Code</label>
-                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Item Code">
-                   </div>
-                   <div class="form-group">
+         <div class="col-md-4">
+           <!-- general form elements -->
+           <div class="card card-primary">
+             <!-- form start -->
+             <form>
+               <div class="card-body">
+                 <div class="form-group">
+                   <label for="exampleInputEmail1">Item Code</label>
+                   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Item Code">
+                 </div>
+                 <div class="form-group">
                      <label for="exampleInputPassword1">Description</label>
                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Description">
                    </div>
@@ -182,65 +182,107 @@
                      <input type="number" class="form-control" id="exampleInputPassword2"
                             placeholder="Enter Unit Price">
                    </div>
-                   <div class="form-group">
-                     <label for="exampleInputPassword1">Qty On Hand</label>
-                     <input type="number" class="form-control" id="exampleInputPassword3" placeholder="Enter Qty">
-                   </div>
+                 <div class="form-group">
+                   <label for="exampleInputPassword1">Qty On Hand</label>
+                   <input type="number" class="form-control" id="exampleInputPassword3" placeholder="Enter Qty">
                  </div>
-                 <!-- /.card-body -->
-                 <div class="card-footer">
-                   <button type="submit" class="btn btn-primary">Submit</button>
-                 </div>
-               </form>
-             </div>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col-12">
-             <div class="card">
-               <div class="card-body table-responsive p-0">
-                 <table class="table table-hover text-nowrap">
-                   <thead>
-                   <tr>
-                     <th>Code</th>
-                     <th>Description</th>
-                     <th>Unit Price</th>
-                     <th>Qty On Hand</th>
-                   </tr>
-                   </thead>
-                   <tbody>
-                   <tr>
-                     <td>183</td>
-                     <td>John Doe</td>
-                     <td>11-7-2014</td>
-                     <td>11-7-2014</td>
-                   </tr>
-                   <tr>
-                     <td>219</td>
-                     <td>Alexander Pierce</td>
-                     <td>11-7-2014</td>
-                     <td>11-7-2014</td>
-                   </tr>
-                   <tr>
-                     <td>657</td>
-                     <td>Bob Doe</td>
-                     <td>11-7-2014</td>
-                     <td>11-7-2014</td>
-                   </tr>
-                   <tr>
-                     <td>175</td>
-                     <td>Mike Doe</td>
-                     <td>11-7-2014</td>
-                     <td>11-7-2014</td>
-                   </tr>
-                   </tbody>
-                 </table>
                </div>
                <!-- /.card-body -->
+               <div class="card-footer form-card-footer">
+                 <button class="btn btn-warning" type="button">Clear</button>
+                 <button type="submit" class="btn btn-primary">Submit</button>
+               </div>
+             </form>
              </div>
+           </div>
+         <div class="col-md-8">
+           <div class="card">
+             <div class="card-body table-responsive p-0">
+               <table class="table table-hover text-nowrap" id="tblItems">
+                 <thead>
+                 <tr>
+                   <th>Code</th>
+                   <th>Description</th>
+                   <th>Qty.</th>
+                   <th>Unit Price</th>
+                   <th></th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 <tr>
+                   <td>I001</td>
+                   <td>Keyboard</td>
+                   <td>10</td>
+                   <td>Rs. 589.33</td>
+                   <td><i class="fas fa-trash"></i></td>
+                 </tr>
+                 </tbody>
+               </table>
+             </div>
+             <!-- /.card-body -->
+             <div class="card-footer table-pagination">
+               <nav aria-label="Page navigation example">
+                 <ul class="pagination">
+                   <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                   <li class="page-item"><a class="page-link" href="#">1</a></li>
+                   <li class="page-item"><a class="page-link" href="#">2</a></li>
+                   <li class="page-item"><a class="page-link" href="#">3</a></li>
+                   <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                 </ul>
+               </nav>
+             </div>
+           </div>
              <!-- /.card -->
            </div>
-         </div>
        </section>
       <!-- /.content -->
   </div>

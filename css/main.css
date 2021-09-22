@@ -155,12 +155,14 @@ textarea {
 #tblItems thead th:nth-child(2),
 #tblItems tbody td:nth-child(2),
 #tblItems thead th:nth-child(3),
-#tblItems tbody td:nth-child(3) {
+#tblItems tbody td:nth-child(3),
+#tblItems thead th:nth-child(4),
+#tblItems tbody td:nth-child(4) {
   text-align: center;
 }
 
-#tblItems thead th:nth-child(4),
-#tblItems tbody td:nth-child(4) {
+#tblItems thead th:last-child,
+#tblItems tbody td:last-child {
   text-align: right;
 }
 
