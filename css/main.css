@@ -84,7 +84,7 @@ textarea {
 }
 
 .main-sidebar {
-  background-color: #273b6d;
+  background-color: #354b85;
 }
 
 .navbar {
@@ -92,8 +92,86 @@ textarea {
   border-bottom-color: #273b6d;
 }
 
-.m-0, .fa-bars, .fa-search {
+/*
+.content{
+  display: flex;
+}
+*/
+
+.m-0, .fa-bars, .fa-search, .fa-times {
   color: white;
+}
+
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+.form-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-card-footer button {
+  margin-left: 20px;
+}
+
+.btn-navbar,
+.form-control-navbar {
+  border: 0;
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+
+.input-group,
+.navbar-search-block,
+.card,
+.table * {
+  background-color: #354b85;
+  color: white;
+}
+
+.page-item * {
+  background-color: #354b85;
+  border: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.table tbody tr {
+  cursor: pointer;
+}
+
+.table tbody td:last-child .fas {
+  font-size: 1.5rem;
+  color: orange;
+}
+
+.table tbody td:last-child:hover .fas {
+  color: red;
+}
+
+#tblItems thead th:nth-child(2),
+#tblItems tbody td:nth-child(2),
+#tblItems thead th:nth-child(3),
+#tblItems tbody td:nth-child(3) {
+  text-align: center;
+}
+
+#tblItems thead th:nth-child(4),
+#tblItems tbody td:nth-child(4) {
+  text-align: right;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.table-pagination {
+  display: flex;
+  justify-content: center;
 }
 
 /*.hold-transition, .sidebar-mini, .layout-fixed{*/

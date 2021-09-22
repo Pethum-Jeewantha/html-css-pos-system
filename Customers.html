@@ -29,10 +29,24 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+         width="60">
   </div>
 
   <!-- Navbar -->
@@ -135,20 +149,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <div class="area">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -179,56 +179,97 @@
                             placeholder="Enter Customer Name">
                    </div>
                    <div class="form-group">
-                     <label for="exampleInputPassword1">Customer Address</label>
+                     <label for="exampleInputPassword2">Customer Address</label>
                      <input type="text" class="form-control" id="exampleInputPassword2"
                             placeholder="Enter Customer Address">
                    </div>
                  </div>
                  <!-- /.card-body -->
-                 <div class="card-footer">
+                 <div class="card-footer form-card-footer">
+                   <button class="btn btn-warning" type="button">Clear</button>
                    <button type="submit" class="btn btn-primary">Submit</button>
                  </div>
                </form>
              </div>
            </div>
          </div>
-         <div class="row">
-           <div class="col-12">
+         <div class="row justify-content-center">
+           <div class="col-10">
              <div class="card">
                <div class="card-body table-responsive p-0">
-                 <table class="table table-hover text-nowrap">
+                 <table class="table table-hover text-nowrap" id="tblItems">
                    <thead>
                    <tr>
                      <th>ID</th>
                      <th>Name</th>
                      <th>Address</th>
+                     <th></th>
                    </tr>
                    </thead>
                    <tbody>
                    <tr>
-                     <td>183</td>
-                     <td>John Doe</td>
-                     <td>11-7-2014</td>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
                    </tr>
                    <tr>
-                     <td>219</td>
-                     <td>Alexander Pierce</td>
-                     <td>11-7-2014</td>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
                    </tr>
                    <tr>
-                     <td>657</td>
-                     <td>Bob Doe</td>
-                     <td>11-7-2014</td>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
                    </tr>
                    <tr>
-                     <td>175</td>
-                     <td>Mike Doe</td>
-                     <td>11-7-2014</td>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
+                   </tr>
+                   <tr>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
+                   </tr>
+                   <tr>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
+                   </tr>
+                   <tr>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
+                   </tr>
+                   <tr>
+                     <td>C001</td>
+                     <td>Manoj Randeni</td>
+                     <td>Galle Road, Panadura</td>
+                     <td><i class="fas fa-trash"></i></td>
                    </tr>
                    </tbody>
                  </table>
                </div>
                <!-- /.card-body -->
+               <div class="card-footer table-pagination">
+                 <nav aria-label="Page navigation example">
+                   <ul class="pagination">
+                     <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                     <li class="page-item"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                   </ul>
+                 </nav>
+               </div>
              </div>
              <!-- /.card -->
            </div>
