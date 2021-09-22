@@ -87,6 +87,15 @@ textarea {
   background-color: #273b6d;
 }
 
+.navbar {
+  background-color: #192a56;
+  border-bottom-color: #273b6d;
+}
+
+.m-0, .fa-bars {
+  color: white;
+}
+
 /*.hold-transition, .sidebar-mini, .layout-fixed{*/
 /*  background-color: #273c75 !important;*/
 /*}*/
