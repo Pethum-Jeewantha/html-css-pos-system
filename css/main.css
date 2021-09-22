@@ -92,11 +92,10 @@ textarea {
   border-bottom-color: #273b6d;
 }
 
-/*
 .content{
   display: flex;
+  flex-wrap: wrap;
 }
-*/
 
 .m-0, .fa-bars, .fa-search, .fa-times {
   color: white;
