@@ -83,6 +83,18 @@ textarea {
   resize: vertical;
 }
 
+.preloader i{
+  font-size: 100px;
+  color: white;
+}
+
+.brand-link span{
+  margin-left: 7%;
+}
+
+.brand-link i{
+  margin-right: 6%;
+}
 .main-sidebar {
   background-color: #354b85;
 }
