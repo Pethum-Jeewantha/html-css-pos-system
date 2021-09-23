@@ -88,7 +88,7 @@ textarea {
 }
 
 .navbar {
-  background-color: #192a56;
+  background-color: transparent;
   border-bottom-color: #273b6d;
 }
 
@@ -176,6 +176,15 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-footer{
+  position: relative;
+  background-color: transparent;
+  width: calc(100%-250px);
+  color: white;
+  border: 0;
+  padding-bottom: .5rem;
 }
 
 /*.hold-transition, .sidebar-mini, .layout-fixed{*/
