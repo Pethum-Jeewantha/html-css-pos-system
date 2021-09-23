@@ -56,6 +56,7 @@
       href="node_modules/admin-lte/plugins/summernote/summernote-bs4.min.css"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/Search.css">
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -95,44 +96,6 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"
               ><i class="fas fa-bars"></i
             ></a>
-          </li>
-        </ul>
-
-        <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto">
-          <!-- Navbar Search -->
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              data-widget="navbar-search"
-              href="#"
-              role="button"
-            >
-              <i class="fas fa-search"></i>
-            </a>
-            <div class="navbar-search-block">
-              <form class="form-inline">
-                <div class="input-group input-group-sm">
-                  <input
-                    class="form-control form-control-navbar"
-                    type="search"
-                    aria-label="Search"
-                  />
-                  <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                      <i class="fas fa-search"></i>
-                    </button>
-                    <button
-                      class="btn btn-navbar"
-                      type="button"
-                      data-widget="navbar-search"
-                    >
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
           </li>
         </ul>
       </nav>
@@ -191,7 +154,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="Items.html" class="nav-link">
                   <i class="nav-icon fas fa-shopping-bag"></i>
                   <p>Manage Items</p>
                 </a>
@@ -204,7 +167,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Search.html" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-search"></i>
                   <p>Search Orders</p>
                 </a>
@@ -223,7 +186,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Items</h1>
+                <h1 class="m-0">Search Orders</h1>
               </div>
               <!-- /.col -->
             </div>
@@ -234,126 +197,82 @@
         <!-- /.content-header -->
         <!-- Main content -->
         <section class="content">
-          <div class="col-md-4">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Item Code</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      placeholder="Enter Item Code"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Description</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Enter Description"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Unit Price</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="exampleInputPassword2"
-                      placeholder="Enter Unit Price"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Qty On Hand</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="exampleInputPassword3"
-                      placeholder="Enter Qty"
-                    />
-                  </div>
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer form-card-footer">
-                  <button class="btn btn-warning" type="button">Clear</button>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-            </div>
+          <div class="row justify-content-center">
+              <div class="col-md-8 offset-md-2 search-wrap">
+                  <form action="simple-results.html">
+                      <div class="input-group">
+                          <input type="search" class="form-control form-control-lg search-bar" placeholder="Type your keywords here">
+                          <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                                  <i class="fa fa-search"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
           </div>
-          <div class="col-md-8">
-            <div class="card">
+          <div class="row justify-content-center">
+            <div class="card col-xl-9">
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap" id="tblItems">
                   <thead>
                     <tr>
-                      <th>Code</th>
-                      <th>Description</th>
-                      <th>Qty.</th>
-                      <th>Unit Price</th>
-                      <th></th>
+                      <th>Order ID</th>
+                      <th>Order Date</th>
+                      <th>Customer ID</th>
+                      <th>Customer Name</th>
+                      <th>Total</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                     <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
-                    </tr>
-                    <tr>
-                      <td>I001</td>
-                      <td>Keyboard</td>
-                      <td>10</td>
-                      <td>Rs. 589.33</td>
-                      <td><i class="fas fa-trash"></i></td>
+                      <td>OD001</td>
+                      <td>2021-02-25</td>
+                      <td>C001</td>
+                      <td>Pethum</td>
+                      <td>1250.00</td>
                     </tr>
                   </tbody>
                 </table>
