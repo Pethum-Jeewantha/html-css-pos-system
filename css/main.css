@@ -79,6 +79,8 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
+ /* TODO: table-hover */
+
 textarea {
   resize: vertical;
 }
@@ -102,6 +104,11 @@ textarea {
 .navbar {
   background-color: transparent;
   border-bottom-color: #273b6d;
+}
+
+.user-panel,
+.brand-link{
+  border-bottom-color: #273b6d !important;
 }
 
 .content {
