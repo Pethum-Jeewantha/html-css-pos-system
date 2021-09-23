@@ -1,9 +1,14 @@
 .table-pagination {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
-.btn-place-order {
-  margin-left: 10px;
+.table-pagination__total{
+  font-size: 25px;
+  text-align: center;
 }
 
 .card-body {
@@ -12,6 +17,14 @@
 
 .form-card-footer {
   padding-right: 0;
+}
+
+option{
+  color: black;
+}
+
+.form-control:disabled {
+  border-color: gray;
 }
 
 /*Todo: drop down, center, search placeholder*/
