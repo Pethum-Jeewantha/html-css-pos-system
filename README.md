@@ -42,7 +42,7 @@ Pethum Jeewantha - [Twitter](https://twitter.com/JeewanthaPethum?s=08) - pethumj
 
 ## Acknowledgements
 
-* [AdminLTE](hhttps://adminlte.io)
+* [AdminLTE](https://adminlte.io)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
 
