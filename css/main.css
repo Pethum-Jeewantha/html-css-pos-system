@@ -214,7 +214,6 @@ textarea {
 .main-footer {
   position: relative;
   background-color: transparent;
-  width: calc(100%-250px);
   color: white;
   border: 0;
   padding-bottom: 0.5rem;
