@@ -78,8 +78,9 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-
- /* TODO: table-hover */
+ #tblItems tbody tr:hover td{
+   background-color: transparent;
+ }
 
 textarea {
   resize: vertical;
