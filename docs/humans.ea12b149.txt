@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Pethum Jeewantha
+    pethumjeewantha4@gmail.com
+    https://github.com/Pethum-Jeewantha
+    https://pethumjeewantha.com
+    https://twitter.com/JeewanthaPethum
+
+# THANKS
+
+    The teacher who taught me.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, ParcelJS, HTML5BoilerPlate, Normalize.css, NPM, GitHub

@@ -172,7 +172,7 @@ textarea {
   color: white;
 }
 
-.table tbody tr {
+.table:not(.tbl-invoice) tbody tr td:last-child{
   cursor: pointer;
 }
 

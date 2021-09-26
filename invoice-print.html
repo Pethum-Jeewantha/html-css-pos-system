@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>POS | Invoice Print</title>
+    <meta name="description" content="POS System" />
+
+    <meta property="og:title" content="POS System" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pethum-jeewantha.github.io/html-css-pos-system"
+    />
+    <meta property="og:image" content="icon.png" />
+
+    <link rel="author" href="humans.txt" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css"
+    />
+    <!-- Theme style -->
+    <link
+      rel="stylesheet"
+      href="node_modules/admin-lte/dist/css/adminlte.min.css"
+    />
+    <link rel="stylesheet" href="css/invoice-print.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Main content -->
+      <section class="invoice">
+        <!-- title row -->
+        <div class="row">
+          <div class="col-12">
+            <h4>
+              <i class="fab fa-opencart"></i> POS
+              <small class="float-right">Date: 2/10/2014</small>
+            </h4>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- info row -->
+        <div class="row invoice-info">
+          <div class="col-sm-4 invoice-col">
+            <b>Invoice #007612</b><br />
+            <b>Account:</b> 968-34567
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Table row -->
+        <div class="row">
+          <div class="col-12 table-responsive">
+            <table
+              class="table table-striped table-hover tbl-invoice"
+              id="tblItems"
+            >
+              <thead>
+                <tr>
+                  <th>Qty</th>
+                  <th>Product</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Call of Duty</td>
+                  <td>$64.50</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Need for Speed IV</td>
+                  <td>$50.00</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Monsters DVD</td>
+                  <td>$10.70</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Grown Ups Blue Ray</td>
+                  <td>$25.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row justify-content-end">
+          <!-- /.col -->
+          <div class="col-8">
+            <p class="lead">October</p>
+            <div class="table-responsive">
+              <table class="table tbl-invoice">
+                <tr>
+                  <th style="width: 50%">Monthly Income:</th>
+                  <td>$250.30</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- Page specific script -->
+    <script>
+      window.addEventListener(window.print());
+    </script>
+  </body>
+</html>

@@ -8,13 +8,16 @@
 
     <meta property="og:title" content="POS System" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pethum-jeewantha.github.io/html-css-pos-system"/>
+    <meta
+      property="og:url"
+      content="https://pethum-jeewantha.github.io/html-css-pos-system"
+    />
     <meta property="og:image" content="icon.png" />
 
     <link rel="author" href="humans.txt" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -94,7 +97,9 @@
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="#" class="brand-link">
-          <span class="brand-text font-weight-bold"><i class="fab fa-opencart"></i>POS</span>
+          <span class="brand-text font-weight-bold"
+            ><i class="fab fa-opencart"></i>POS</span
+          >
         </a>
 
         <!-- Sidebar -->
@@ -165,7 +170,7 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
           <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row mb-2 justify-content-between">
               <div class="col-sm-6">
                 <h1 class="m-0">Dashboard</h1>
               </div>
@@ -183,7 +188,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-info">
+                <div class="small-box bg-gradient-info">
                   <div class="inner">
                     <h3>150</h3>
 
@@ -200,7 +205,7 @@
               <!-- ./col -->
               <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-success">
+                <div class="small-box bg-gradient-success">
                   <div class="inner">
                     <h3>53</h3>
 
@@ -217,7 +222,7 @@
               <!-- ./col -->
               <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-warning">
+                <div class="small-box bg-gradient-warning">
                   <div class="inner">
                     <h3>44</h3>
 
@@ -233,6 +238,117 @@
               </div>
             </div>
             <!-- /.row -->
+            <div class="row justify-content-center">
+              <div class="card invoice p-3 mb-3 col-xl-10">
+                <!-- title row -->
+                <div class="row">
+                  <div class="col-12">
+                    <h4>
+                      <i class="fab fa-opencart"></i> POS
+                      <small class="float-right">Date: 2/10/2014</small>
+                    </h4>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- info row -->
+                <div class="row invoice-info">
+                  <div class="col-sm-4 invoice-col">
+                    <b>Invoice #007612</b><br />
+                    <b>Account:</b> 968-34567
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <!-- Table row -->
+                <div class="row">
+                  <div class="col-12 table-responsive">
+                    <table class="table table-striped table-hover tbl-invoice" id="tblItems">
+                      <thead>
+                        <tr>
+                          <th>Qty</th>
+                          <th>Product</th>
+                          <th>Subtotal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Call of Duty</td>
+                          <td>$64.50</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>Need for Speed IV</td>
+                          <td>$50.00</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>Monsters DVD</td>
+                          <td>$10.70</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>Grown Ups Blue Ray</td>
+                          <td>$25.99</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                  <!-- accepted payments column -->
+                  <div class="row col-4 justify-content-center align-items-center">
+                    <!-- small box -->
+                    <div class="col-lg-8">
+                      <div class="small-box bg-gradient-blue">
+                        <div class="inner">
+                          <h3>150</h3>
+                          <p>Monthly Income</p>
+                        </div>
+                        <div class="icon">
+                          <i class="fas fa-coins"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-8">
+                    <p class="lead">October</p>
+                    <div class="table-responsive">
+                      <table class="table tbl-invoice">
+                        <tr>
+                          <th style="width: 50%">Monthly Income:</th>
+                          <td>$250.30</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <!-- this row will not appear when printing -->
+                <div class="row no-print">
+                  <div class="col-12">
+                    <a
+                      href="invoice-print.html"
+                      rel="noopener"
+                      target="_blank"
+                      class="btn btn-default"
+                      ><i class="fas fa-print"></i> Print</a
+                    >
+                    <button
+                      type="button"
+                      class="btn btn-primary float-right"
+                      style="margin-right: 5px"
+                    >
+                      <i class="fas fa-download"></i> Generate PDF
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- /.container-fluid -->
         </section>
