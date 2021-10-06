@@ -12,7 +12,8 @@
     "start": "npm run build && npm run dev"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "admin-lte": "^3.1.0"
