@@ -11213,7 +11213,7 @@ return jQuery;
 } );
 
 },{"process":"node_modules/process/browser.js"}],"ts/manage-customers.ts":[function(require,module,exports) {
-"use strict"; // const MOCK_API = '';
+"use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
@@ -11225,14 +11225,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var jquery_1 = __importDefault(require("jquery"));
+var jquery_1 = __importDefault(require("jquery")); // const BASE_API = 'https://bc677221-4831-4411-b038-9e174414f8ff.mock.pstmn.io';
 
-var BASE_API = 'https://bc677221-4831-4411-b038-9e174414f8ff.mock.pstmn.io';
-var CUSTOMER_SERVICE_API = BASE_API + "/customers";
+
+var BASE_API = 'http://localhost:8080/pos';
+var CUSTOMERS_SERVICE_API = BASE_API + "/customers";
+var PAGE_SIZE = 6;
 var customers = [];
 var totalCustomers = 0;
 var selectedPage = 1;
-var PAGE_SIZE = 6;
 var pageCount = 1;
 loadAllCustomers();
 
@@ -11240,7 +11241,7 @@ function loadAllCustomers() {
   var http = new XMLHttpRequest();
 
   http.onreadystatechange = function () {
-    if (http.readyState == http.DONE) {
+    if (http.readyState === http.DONE) {
       if (http.status !== 200) {
         alert("Failed to fetch customers, try again...!");
         return;
@@ -11250,35 +11251,45 @@ function loadAllCustomers() {
       customers = JSON.parse(http.responseText);
       (0, jquery_1.default)('#tbl-customers tbody tr').remove();
       customers.forEach(function (c) {
-        var rowHtml = "<tr>\n                <td>" + c.id + "</td>\n                <td>" + c.name + "</td>\n                <td>" + c.address + "</td>\n                <td><i class=\"fas fa-trash\"></i></td>\n                </tr>\n                ";
+        var rowHtml = "<tr>\n                 <td>" + c.id + "</td>\n                 <td>" + c.name + "</td>\n                 <td>" + c.address + "</td>\n                 <td><i class=\"fas fa-trash\"></i></td>\n                 </tr>";
         (0, jquery_1.default)('#tbl-customers tbody').append(rowHtml);
       });
       initPagination();
     }
-  };
+  }; // http://url?page=10&size=10
 
-  http.open('GET', CUSTOMER_SERVICE_API + ("?page=" + selectedPage + "&size=" + PAGE_SIZE), true);
+
+  http.open('GET', CUSTOMERS_SERVICE_API + ("?page=" + selectedPage + "&size=" + PAGE_SIZE), true); // 4. Setting headers, etc.
+
   http.send();
 }
 
 function initPagination() {
   pageCount = Math.ceil(totalCustomers / PAGE_SIZE);
-  console.log(PAGE_SIZE);
-  var html = "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">Previous</a></li>";
+  showOrHidePagination();
+  if (pageCount === 1) return;
+  var html = "<li class=\"page-item\"><a class=\"page-link\" href=\"javascript:void(0);\">\xAB</a></li>";
 
-  for (var index = 0; index < pageCount; index++) {
-    html += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">" + (index + 1) + "</a></li>";
+  for (var i = 0; i < pageCount; i++) {
+    html += "<li class=\"page-item " + (selectedPage === i + 1 ? 'active' : '') + "\"><a class=\"page-link\" href=\"javascript:void(0);\">" + (i + 1) + "</a></li>";
   }
 
-  html += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>";
-  (0, jquery_1.default)('ul.pagination').html(html);
-  (0, jquery_1.default)('.page-item:first-child').on('click', function () {
+  html += "<li class=\"page-item\"><a class=\"page-link\" href=\"javascript:void(0);\">\xBB</a></li>";
+  (0, jquery_1.default)("ul.pagination").html(html);
+
+  if (selectedPage === 1) {
+    (0, jquery_1.default)(".page-item:first-child").addClass('disabled');
+  } else if (selectedPage === pageCount) {
+    (0, jquery_1.default)(".page-item:last-child").addClass('disabled');
+  }
+
+  (0, jquery_1.default)(".page-item:first-child").on('click', function () {
     return navigateToPage(selectedPage - 1);
   });
-  (0, jquery_1.default)('.page-item:last-child').on('click', function () {
+  (0, jquery_1.default)(".page-item:last-child").on('click', function () {
     return navigateToPage(selectedPage + 1);
   });
-  (0, jquery_1.default)('.page-item:not(.page-item:first-child, .page-item:last-child)').on('click', function () {
+  (0, jquery_1.default)(".page-item:not(.page-item:first-child, .page-item:last-child)").on('click', function () {
     navigateToPage(+(0, jquery_1.default)(this).text());
   });
 }
@@ -11287,6 +11298,10 @@ function navigateToPage(page) {
   if (page < 1 || page > pageCount) throw 'Invalid page number';
   selectedPage = page;
   loadAllCustomers();
+}
+
+function showOrHidePagination() {
+  pageCount > 1 ? (0, jquery_1.default)(".pagination").show() : (0, jquery_1.default)('.pagination').hide();
 }
 },{"jquery":"node_modules/jquery/dist/jquery.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
