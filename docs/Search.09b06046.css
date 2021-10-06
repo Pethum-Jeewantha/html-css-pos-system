@@ -1,0 +1,29 @@
+.content{
+    display: block;
+}
+
+.search-wrap{
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.btn-default{
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-default:hover *{
+    color: #2e417a;
+}
+
+.search-bar{
+    border: 0;
+}
+
+.table tbody tr{
+    cursor: pointer;
+  }
+
+
+/*# sourceMappingURL=/Search.09b06046.css.map */

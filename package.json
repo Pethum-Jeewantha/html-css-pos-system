@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rm -rf docs",
     "build": "parcel build index.html 404.html Items.html Customers.html Orders.html invoice-print.html --out-dir docs --public-url /html-css-pos-system/",
-    "dev": "parcel index.html --open",
+    "dev": "parcel Customers.html --open --out-dir docs",
     "start": "npm run build && npm run dev"
   },
   "devDependencies": {

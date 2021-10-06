@@ -8,13 +8,16 @@
 
     <meta property="og:title" content="POS System" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pethum-jeewantha.github.io/html-css-pos-system"/>
+    <meta
+      property="og:url"
+      content="https://pethum-jeewantha.github.io/html-css-pos-system"
+    />
     <meta property="og:image" content="icon.png" />
 
     <link rel="author" href="humans.txt" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -68,7 +71,7 @@
       <div
         class="preloader flex-column justify-content-center align-items-center"
       >
-      <i class="fab fa-opencart animation__shake"></i>
+        <i class="fab fa-opencart animation__shake"></i>
       </div>
 
       <!-- Navbar -->
@@ -126,7 +129,9 @@
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="#" class="brand-link">
-          <span class="brand-text font-weight-bold"><i class="fab fa-opencart"></i>POS</span>
+          <span class="brand-text font-weight-bold"
+            ><i class="fab fa-opencart"></i>POS</span
+          >
         </a>
 
         <!-- Sidebar -->
@@ -257,7 +262,7 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap" id="tblItems">
+                <table class="table table-hover text-nowrap" id="tbl-customers">
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -322,21 +327,6 @@
               <div class="card-footer table-pagination">
                 <nav aria-label="Page navigation example">
                   <ul class="pagination">
-                    <li class="page-item">
-                      <a class="page-link" href="#">Previous</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                    </li>
                   </ul>
                 </nav>
               </div>
@@ -359,6 +349,7 @@
 
     <!-- jQuery -->
     <script src="node_modules/admin-lte/plugins/jquery/jquery.min.js"></script>
+    <script src="ts/global-jquery.ts"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="node_modules/admin-lte/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -380,5 +371,6 @@
     <script src="node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script src="node_modules/admin-lte/dist/js/adminlte.js"></script>
+    <script src="ts/manage-customers.ts"></script>
   </body>
 </html>
