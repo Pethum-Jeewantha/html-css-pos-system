@@ -219,6 +219,10 @@ textarea {
   padding-bottom: 0.5rem;
 }
 
+.selected{
+  background-color: #2222 !important;
+}
+
 /*.hold-transition, .sidebar-mini, .layout-fixed{*/
 /*  background-color: #273c75 !important;*/
 /*}*/
@@ -339,3 +343,4 @@ textarea {
     border-radius: 50%;
   }
 }
+
