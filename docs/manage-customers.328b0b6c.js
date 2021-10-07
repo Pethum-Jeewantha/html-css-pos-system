@@ -11272,7 +11272,7 @@ function loadAllCustomers() {
       customers = JSON.parse(http.responseText);
       (0, jquery_1.default)('#tbl-customers tbody tr').remove();
       customers.forEach(function (c) {
-        var rowHtml = "<tr>\n                 <td>" + c.id + "</td>\n                 <td>" + c.name + "</td>\n                 <td>" + c.address + "</td>\n                 <td><i class=\"fas fa-trash\"></i></td>\n                 </tr>";
+        var rowHtml = "<tr>\n                 <td>" + c.id + "</td>\n                 <td>" + c.name + "</td>\n                 <td>" + c.address + "</td>\n                 <td><i class=\"fas fa-trash trash\"></i></td>\n                 </tr>";
         (0, jquery_1.default)('#tbl-customers tbody').append(rowHtml);
       });
       initPagination();
@@ -11423,6 +11423,51 @@ function saveCustomer(customer) {
   (0, jquery_1.default)('#txt-address').val(address);
   (0, jquery_1.default)("#tbl-customers tbody tr").removeClass('selected');
   (0, jquery_1.default)(this).addClass('selected');
+});
+(0, jquery_1.default)('#tbl-customers tbody').on('click', '.trash', function (eventData) {
+  if (confirm('Are you sure to delete?')) {
+    if (deleteCustomer((0, jquery_1.default)(eventData.target).parents("tr").find('td:first-child').text()) === 204) {
+      (0, jquery_1.default)(eventData.target).parents("tr").fadeOut(500, function () {
+        (0, jquery_1.default)(this).remove();
+        showOrHidePagination();
+
+        if ((0, jquery_1.default)("#tbl-customers tbody tr").length % PAGE_SIZE === 0) {
+          initPagination();
+
+          if (selectedPage >= pageCount) {
+            selectedPage = pageCount;
+            navigateToPage(selectedPage);
+          }
+        } else {
+          navigateToPage(selectedPage);
+        }
+
+        (0, jquery_1.default)('#btn-clear').trigger('click');
+      });
+    }
+  }
+});
+
+function deleteCustomer(id) {
+  var http = new XMLHttpRequest();
+
+  http.onreadystatechange = function () {
+    if (http.readyState === http.DONE) {
+      if (http.status !== 204) {
+        alert("Failed to delete customer, try again...!");
+        return;
+      }
+    }
+  };
+
+  http.open('DELETE', CUSTOMERS_SERVICE_API + ("?id=" + id), true);
+  http.send();
+  return 204;
+}
+
+(0, jquery_1.default)('#btn-clear').on('click', function () {
+  (0, jquery_1.default)("#tbl-customers tbody tr.selected").removeClass('selected');
+  (0, jquery_1.default)("#txt-id").removeAttr('disabled').trigger('focus');
 });
 },{"./dto/customer":"ts/dto/customer.ts","jquery":"node_modules/jquery/dist/jquery.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

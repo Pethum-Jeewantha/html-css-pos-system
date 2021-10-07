@@ -36,7 +36,7 @@ function loadAllCustomers(): void {
                  <td>${c.id}</td>
                  <td>${c.name}</td>
                  <td>${c.address}</td>
-                 <td><i class="fas fa-trash"></i></td>
+                 <td><i class="fas fa-trash trash"></i></td>
                  </tr>` ;
 
 
@@ -216,4 +216,60 @@ $('#tbl-customers tbody').on('click', 'tr', function () {
     $("#tbl-customers tbody tr").removeClass('selected');
     $(this).addClass('selected');
 
+});
+
+$('#tbl-customers tbody').on('click', '.trash', function (eventData) {
+    if (confirm('Are you sure to delete?')) {
+        
+       if(deleteCustomer(($(eventData.target).parents("tr").find('td:first-child')).text()) === 204){
+        
+        $(eventData.target).parents("tr").fadeOut(500, function () {
+
+            $(this).remove();
+            
+            showOrHidePagination();
+
+            if (($("#tbl-customers tbody tr").length % PAGE_SIZE) === 0) {
+                initPagination();
+
+                if (selectedPage >= pageCount) {
+                    selectedPage = pageCount;
+                    navigateToPage(selectedPage);
+                }
+            } else {
+                navigateToPage(selectedPage);
+            }
+
+            $('#btn-clear').trigger('click');
+        });
+    }
+    }
+});
+
+function deleteCustomer(id:string):number{
+    const http = new XMLHttpRequest();
+
+    http.onreadystatechange = () => {
+
+        if (http.readyState === http.DONE) {
+
+            if (http.status !== 204) {
+                alert("Failed to delete customer, try again...!");
+                return;
+            }
+
+        }
+
+    };
+
+    http.open('DELETE', CUSTOMERS_SERVICE_API + `?id=${id}`, true);
+
+    http.send();
+
+    return 204;
+}
+
+$('#btn-clear').on('click', () => {
+    $("#tbl-customers tbody tr.selected").removeClass('selected');
+    $("#txt-id").removeAttr('disabled').trigger('focus');
 });
